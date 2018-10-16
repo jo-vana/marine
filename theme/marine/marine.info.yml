@@ -1,0 +1,31 @@
+# Theme information
+name: Marine
+type: theme
+base theme: classy
+description: Drupal theme files to quickly kickstart a new theme development.
+core: 8.x
+version: 1.x
+
+# Include libraries
+libraries:
+  - marine/global-css
+  - marine/global-js
+
+# Regions
+regions:
+  top_header: 'Top header'
+  header: 'Header'
+  hero: 'Hero'
+  content: 'Content'
+  button_block: 'Button block'
+  calendar: 'Calendar'
+  info: 'Info'
+  gallery: 'Gallery'
+  clients: 'Clients'
+  features: 'Features'
+  slider: 'Slider'
+  footer: 'Footer'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'

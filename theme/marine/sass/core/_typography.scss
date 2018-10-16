@@ -1,0 +1,84 @@
+// ========================================
+//
+// @file _typography.scss
+// Base level typography, fonts, colors, sizes
+//
+// ========================================
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet');
+
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+	&:last-child {
+	  margin-bottom: 0;
+	}
+}
+
+a {
+  font-family: 'Open Sans', sans-serif;
+  transition: 0.4s;
+  //color: $color-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: -1px;
+  a {
+    color: inherit;
+
+    &:hover {
+    }
+  }
+}
+
+h1 {
+  @include rem('font-size', 36px);
+}
+
+h2 {
+  @include rem('font-size', 30px);
+}
+
+h3 {
+  @include rem('font-size', 24px);
+}
+
+h4 {
+  @include rem('font-size', 20px);
+}
+
+h5 {
+  @include rem('font-size', 18px);
+}
+
+h6 {
+  @include rem('font-size', 16px);
+}
+
+ul {
+
+  li {
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ol {
+
+  li {
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

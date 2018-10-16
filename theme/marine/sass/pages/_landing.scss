@@ -1,0 +1,1012 @@
+// ========================================
+//
+// @file _landing.scss
+// Landing page specific styling
+//
+// ========================================
+
+// -- Hero Region - -
+.hero {
+  min-height: 480px;
+  background-color: $hero;
+
+  .container {
+    padding-top: 60px;
+  }
+  .region-hero {
+    display: block;
+    width: 50%;
+  }
+  @media screen and(max-width: $screen-md-min) {
+    .region-hero {
+      width: 100%;
+    }
+  }
+}
+#block-marinetheme {
+  .field--name-body {
+    display: block;
+    padding-bottom: 35px;
+    position: relative;
+    left: -10px;
+  }
+  .field--name-field-items {
+    display: block;
+
+    .field__item {
+      padding-bottom: 20px;
+
+      .paragraph--type--text-and-icon {
+        display: flex;
+
+        .field--name-field-icon {
+          display: inline-block;
+          padding: 0 20px 0 0;
+        }
+        .field--name-field-textbox {
+          display: inline-block;
+          text-shadow: -2px 0px 1px rgba(150, 150, 150, 1);
+
+          h3 {
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0 auto;
+          }
+          p {
+            color: $color-white;
+            font-size: 11px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+// - - Region Content - -
+.layout-one-sidebar {
+  display: block;
+  min-height: 435px;
+  background-color: $blue-background;
+  .region-content {
+    #block-content {
+      .field--name-body {
+        display: block;
+        max-width: 680px;
+        padding: 25px 0;
+        margin: 0 auto;
+        text-align: center;
+        color: $color-white;
+        h3 {
+          //font-size: 16px;
+          font-weight: 100;
+        }
+        p {
+          font-size: 16px;
+
+        }
+      }
+      .field--name-field-items {
+        //display: flex;
+        //justify-content: space-between;
+        //padding-top: 10px;
+
+
+
+        .field__item {
+          @include make-xs-column(3);
+
+          display: block;
+          text-align: center;
+          color: $color-white;
+          .field--type-image {
+            width: 100%;
+            img {
+              margin: 0 auto;
+            }
+          }
+
+          .field--name-field-textbox {
+            width: 100%;
+            h3 {
+              font-size: 18px;
+              font-weight: 100;
+            }
+            font-size: 13px;
+          }
+        }
+        @media screen and(max-width: $screen-md-min) {
+          .field__item {
+            @include make-xs-column(6);
+          }
+        }
+        @media screen and(max-width: $screen-sm-min) {
+          .field__item {
+            @include make-xs-column(12);
+            padding-bottom: 20px;
+          }
+        }
+      }
+
+    }
+  }
+  @media screen and(max-width: $screen-md-min) {
+    padding-bottom: 30px;
+  }
+}
+// - - Region Button - -
+.button-block-region {
+  min-height: 148px;
+
+  .region-button-block {
+    display: block;
+    padding: 17px 0;
+
+    .field--name-body {
+      p {
+        display: inline-block;
+        font-size: 34px;
+        color: $text-dark;
+        font-weight: 100;
+        span {
+          color: $blue;
+        }
+      }
+      a {
+        display: inline-block;
+        border-radius: 2px;
+        position: relative;
+        float: right;
+        margin: 28px 0;
+        padding: 20px 40px 20px 60px;
+        background-color: $blue;
+        color: $color-white;
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: 12px;
+
+        &::before {
+          content: '';
+          background-image: url("/../../../../../sites/default/files/button.png");
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          left: 32px;
+          position: absolute;
+          top: 19px;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+// - - Region with calendar
+.region-calendar {
+  display: block;
+  background-color: $calendar-region;
+
+  .view-header {
+    padding-top: 20px;
+    .month-block {
+      display: block;
+      width: 150px;
+      height: 44px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: $bg-dark;
+      p {
+        text-transform: uppercase;
+        color: $color-white;
+        font-size: 11px;
+        padding: 15px 0;
+      }
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+
+        border-top: 7px solid $bg-dark;
+        top: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+      }
+    }
+  }
+  .view-footer {
+    padding: 50px 0;
+
+    .load-button {
+      display: block;
+      width: 145px;
+      height: 45px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: $blue;
+      p {
+        font-size: 14px;
+        color: $color-white;
+        &::after {
+          content: url("/../../../../../sites/default/files/refresh.png");
+          display: inline-block;
+          position: relative;
+          top: 11px;
+          left: 5px;
+
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  // Time-line tree
+  .wrapper-list {
+    padding-top: 50px;
+  }
+
+  article.node--type-blog {
+    display: block;
+    background-color: $color-white;
+    border: 1px solid $light-gray;
+    text-align: left;
+
+    .blog-header {
+      border-bottom: 1px solid $light-gray;
+      .blog-header-wrapper {
+        position: relative;
+        padding: 15px;
+        min-height: 78px;
+        .top {
+          display: flex;
+          width: 87%;
+          float: right;
+          font-size: 11px;
+          text-transform: uppercase;
+          font-family: 'Open Sans', sans-serif;
+
+          .field--name-field-date-of-posting {
+            color: $blue;
+            padding-right: 2px;
+          }
+          .field--name-field-year {
+            color: $color-black;
+          }
+        }
+        .bottom {
+          display: flex;
+          align-items: baseline;
+          width: 87%;
+          float: right;
+
+          .field--name-field-author {
+            display: inline-block;
+            font-size: 10px;
+            color: $text-color;
+            text-transform: uppercase;
+            &::before {
+              content: 'BY ';
+              font-family: 'Open Sans', sans-serif;
+              font-size: 10px;
+              color: $text-color;
+            }
+            &::after {
+              content: '';
+              display: inline-block;
+              margin: 2px 5px;
+              width: 3px;
+              height: 3px;
+              background-color: $text-color;
+            }
+          }
+          .field--name-field-category {
+            display: flex;
+            .field__item {
+              padding-right: 5px;
+              a {
+                text-decoration: none;
+                pointer-events: none;
+                text-transform: uppercase;
+                font-size: 10px;
+                color: $text-color;
+              }
+            }
+            &::after {
+              content: '';
+              display: inline-block;
+              margin: 8px 5px;
+              width: 3px;
+              height: 3px;
+              background-color: $text-color;
+            }
+          }
+          p {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 10px;
+            color: $text-color;
+          }
+        }
+        &::before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          left: 21px;
+          top: 15px;
+          width: 50px;
+          height: 50px;
+          background-color: $light-gray;
+        }
+      }
+    }
+    .post {
+      //padding: 10px;
+    }
+
+
+    .field--name-field-lin {
+      background-image: url("/../../../../../sites/default/files/link-background.png");
+      display: block;
+      min-height: 115px;
+      position: relative;
+      top: 0;
+      padding: 10px;
+      h3 {
+        font-size: 20px;
+        font-weight: 400;
+        color: $light-blue;
+        margin-bottom: 5px;
+      }
+      p {
+        margin-top: 0;
+        a {
+          font-size: 12px;
+          color: $lighter-blue;
+        }
+      }
+    }
+    .field--name-field-banner {
+      background-image: url("/../../../../../sites/default/files/baner-background.png");
+      display: block;
+      min-height: 175px;
+      position: relative;
+      top: 0;
+      padding: 13px;
+      p {
+        font-size: 20px;
+        color: $light-blue;
+        line-height: 1.5;
+        margin-top: 5px;
+        span {
+          font-size: 12px;
+          color: $lighter-blue;
+        }
+      }
+    }
+
+    .title {
+      display: flex;
+      padding: 10px 10px 0 10px;
+
+      .field--name-field-post-type-icon {
+        display: inline-block;
+        margin-top: 3px;
+        max-width: 50px;
+      }
+      h2.node__title {
+        display: inline-block;
+        margin-top: 0;
+        padding-left: 10px;
+        font-size: 22px;
+        font-weight: 400;
+        color: $blue;
+
+        a {
+          text-decoration: none;
+          pointer-events: none;
+        }
+      }
+
+    }
+    .body {
+      padding: 0 10px 30px 10px;
+      .field--name-body {
+        padding-bottom: 20px;
+        p {
+          font-size: 13px;
+          color: $text-color;
+          margin-top: 0;
+        }
+      }
+      .field--name-field-more {
+        a {
+          text-decoration: none;
+          font-size: 14px;
+          color: $blue;
+          &::after {
+            content: url("/../../../../../sites/default/files/arrow.png");
+            display: inline-block;
+            top: 6px;
+            position: relative;
+            left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+ul.timeline-list {
+  &::after {
+    background-color: $color-white;
+  }
+  li.timeline-item {
+    .timeline-item-wrapper {
+      padding-right: 35px!important;
+      padding-left: 35px!important;
+
+      span.timeline-marker {
+        right: -11px!important;
+        top: 10%!important;
+        width: 22px;
+        height: 22px;
+        background: $gray;
+        border: 5px solid $color-white;
+      }
+    }
+  }
+}
+// - - Info Region - -
+  // - Features list - -
+.region-info {
+  #block-featureslist {
+    @include make-xs-column(6);
+    padding-left: 0;
+
+    h2 {
+      font-size: 22px;
+      font-weight: 400;
+      color: $text-dark;
+    }
+
+    .block-wrapper {
+      display: block;
+      max-height: 295px;
+      background-color: $bg-light;
+
+      ul.tabs {
+        display: inline-block;
+        width: 200px;
+        li.tab-link {
+          position: relative;
+          height: 74px;
+          display: block;
+          width: 100%;
+          background-color: $bg-dark;
+          border-bottom: 1px solid rgba(204, 204, 204, 0.22);
+          padding: 31px 7px 25px 61px;
+          text-transform: uppercase;
+          font-size: 11px;
+          color: $color-white;
+
+          &:hover {
+            cursor: pointer;
+          }
+          &.current {
+            background-color: $blue;
+            &::after {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 28px;
+              right: 0;
+              width: 0;
+              height: 0;
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+
+              border-right:10px solid $bg-light;
+            }
+          }
+          &.web {
+            &::before {
+              content: url("/../../../../../sites/default/files/web.png");
+              display: block;
+              position: absolute;
+              top: 18px;
+              left: 7px;
+            }
+          }
+          &.tool {
+            &::before {
+              content: url("/../../../../../sites/default/files/tools.png");
+              display: block;
+              position: absolute;
+              top: 18px;
+              left: 7px;
+            }
+          }
+          &.rocket {
+            &::before {
+              content: url("/../../../../../sites/default/files/rocket.png");
+              display: block;
+              position: absolute;
+              top: 18px;
+              left: 7px;
+            }
+          }
+          &.support {
+            &::before {
+              content: url("/../../../../../sites/default/files/support.png");
+              display: block;
+              position: absolute;
+              top: 18px;
+              left: 7px;
+            }
+          }
+        }
+      }
+
+      .tab-content {
+        display: none;
+        &.current {
+          display: inline-block;
+          float: right;
+          max-width: 370px;
+          min-height: 296px;
+          padding: 0 10px 0 30px;
+          h3 {
+            font-size: 18px;
+            color: $blue;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+          }
+          p {
+            font-size: 13px;
+            color: $text-color;
+          }
+          ul {
+            list-style: url("/../../../../../sites/default/files/list-style.png");
+            li {
+              font-family: 'Open Sans', sans-serif;
+              font-size: 14px;
+              color: $text-dark;
+            }
+          }
+
+        }
+      }
+    }
+  }
+  // - Get in touch
+  #block-getintouch {
+    @include make-xs-column(3);
+
+    h2 {
+      font-size: 22px;
+      font-weight: 400;
+      color: $text-dark;
+    }
+
+    .field--name-body {
+      min-height: 292px;
+      background-color: $light-gray;
+
+      img {
+        position: relative;
+        top: 90px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  #block-views-block-contact-block-1 {
+    @include make-xs-column(3);
+
+    article.node--type-contact {
+      .node__title {
+        display: none;
+      }
+      .node__content {
+        display: block;
+        margin-top: 64px;
+        width: 270px;
+        height: 295px;
+        .field--name-field-contact {
+          form {
+            .form-item-name {
+              label {
+                display: none;
+              }
+              input {
+                @include input-style;
+              }
+            }
+            .form-item-email {
+              label {
+                display: none;
+              }
+              input {
+                @include input-style;
+              }
+            }
+            .form-item-message {
+              label {
+                display: none;
+              }
+              textarea {
+                background-color: $bg-light;
+                border: 1px solid $light-gray;
+                padding: 20px 0 0 20px;
+              }
+            }
+            .form-actions {
+              .webform-button--submit {
+                @include button-style;
+                background-color: $blue;
+              }
+              .webform-button--reset {
+                @include button-style;
+                margin-left: 10px;
+                display: inline-block;float: right;
+                background-color: $bg-dark;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.gallery-block-region {
+  .gallery {
+    display: block;
+    padding-top: 30px;
+    h2 {
+      font-size: 22px;
+      font-weight: 400;
+      color: $text-dark;
+    }
+    .gallery-wrapper {
+      .block {
+        @include make-xs-column(3);
+        padding: 0;
+        border-right: 1px solid $text-dark;
+        max-height: 320px;
+
+        .top {
+          display: block;
+          min-height: 203px;
+          background-color: $light-gray;
+        }
+        .bottom {
+          display: flex;
+          background-color: $bg-dark;
+          position: relative;
+          justify-content: space-between;
+          height: 95px;
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -12px;
+            left: 19px;
+            width: 0;
+            height: 0;
+            border-left: 13px solid transparent;
+            border-right: 13px solid transparent;
+
+            border-bottom: 13px solid $bg-dark;
+          }
+          .text {
+            padding-left: 15px;
+            color: $color-white;
+            font-family: 'Open Sans', sans-serif;
+
+            h3 {
+              font-size: 18px;
+              font-weight: 400;
+              margin-bottom: 5px;
+            }
+            p {
+              font-size: 11px;
+              color: $gray;
+              text-transform: uppercase;
+              margin-top: 5px;
+            }
+          }
+          .likes {
+            display: inline-block;
+            width: 70px;
+            text-align: right;
+            p {
+              position: relative;
+              padding: 20px;
+              font-size: 11px;
+              color: $gray;
+
+              &::before {
+                content: url("/../../../../../sites/default/files/gray-heart.png");
+                display: block;
+                position: absolute;
+                top: 14px;
+                left: 5px;
+                cursor: pointer;
+              }
+              &.current {
+                &::before {
+                  content: url("/../../../../../sites/default/files/red-heart.png");
+
+                }
+              }
+            }
+          }
+        }
+        &.last {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+// - - Clients region - -
+.clients-block-region {
+  display: block;
+  margin-top: 65px;
+  background-color: $bg-light;
+  border-top: 1px solid $light-gray;
+  .view-id-clients {
+    min-height: 155px;
+    .view-content {
+      padding-top: 20px;
+
+      .views-row {
+        @include make-xs-column(2.4);
+        vertical-align: bottom;
+      }
+    }
+  }
+}
+// - - Features region - -
+.features-block-region {
+  display: block;
+  background-color: $bg-features;
+  min-height: 470px;
+  background-image: url("/../../../../../sites/default/files/feature-bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  .region-features {
+    #block-mainfeatures {
+      display: block;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      h2 {
+        font-size: 30px;
+        color: $color-white;
+        font-weight: 400;
+      }
+      .field--name-body {
+        p {
+          font-size: 14px;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+// -- Footer - -
+.footer {
+  background-color: $bg-footer;
+
+  .region-footer-first {
+    @include make-xs-column(3);
+
+    #block-footerfirst {
+      font-size: 12px;
+      color: $text-color;
+    }
+
+  }
+  .region-footer-second {
+    @include make-xs-column(3);
+
+    #block-recentposts {
+      h2 {
+        font-size: 18px;
+        font-weight: 500;
+        color: $text-color;
+      }
+      .field--name-body {
+        h3 {
+          font-size: 13px;
+          color: $light-gray;
+          margin: 0;
+          font-style: italic;
+          font-weight: 400;
+        }
+        p {
+          font-size: 12px;
+          color: $text-color;
+          margin: 1px;
+
+          span {
+            font-size: 10px;
+            text-transform: uppercase;
+          }
+        }
+        p:nth-of-type(2) {
+          margin-bottom: 15px;
+          border-bottom: 1px solid $text-color;
+          padding-bottom: 15px;
+        }
+      }
+    }
+
+  }
+  .region-footer-third {
+    @include make-xs-column(3);
+
+    #block-contacts {
+      h2 {
+        font-size: 18px;
+        font-weight: 500;
+        color: $text-color;
+      }
+      .field--name-body {
+        p {
+          font-size: 12px;
+          color: $text-color;
+          img {
+            padding-right: 10px;
+            padding-bottom: 62px;
+          }
+        }
+        p:nth-of-type(5),
+        p:nth-of-type(8) {
+          margin-bottom: 20px;
+        }
+        p:nth-of-type(6) {
+          img {
+            padding-bottom: 25px;
+          }
+        }
+      }
+    }
+
+  }
+  .region-footer-fourth {
+    @include make-xs-column(3);
+
+    #block-newslettersignup {
+      h2 {
+        font-size: 18px;
+        font-weight: 500;
+        color: $text-color;
+      }
+
+      .field--name-body {
+        display: block;
+        min-height: 100px;
+        p {
+          font-size: 12px;
+          color: $text-color;
+          display: block;
+          position: relative;
+
+          &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 40px;
+            background-color: $bg-input;
+            position: relative;
+            bottom: -20px;
+          }
+          &::before {
+            content: url("/../../../../../sites/default/files/ssubscription.png");
+            display: block;
+            position: absolute;
+            bottom: -14px;
+            right: 11px;
+            z-index: 99;
+          }
+        }
+      }
+    }
+
+    #block-followus {
+      h2 {
+        font-size: 18px;
+        font-weight: 500;
+        color: $text-color;
+      }
+    }
+
+  }
+}
+.footer-bottom {
+  background-color: $dark;
+  min-height: 55px;
+  .container {
+    padding: 18px 0;
+    span {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      color: $text-color;
+    }
+  }
+}
+// - - Slider-Twitter reg - -
+.slider-region {
+  background-color: $slider-bg;
+  .region-slider {
+    #block-twittslide {
+      .field--name-body {
+
+        p:nth-of-type(1) {
+          display: inline-block;
+          position: relative;
+          padding: 38px 23px;
+          float: left;
+          width: 120px;
+          height: 117px;
+          background-color: $twit-bg;
+          margin: 0;
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 22px;
+            right: -10px;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+
+            border-right: 15px solid $twit-bg;
+            transform: rotate(45deg);
+          }
+        }
+        h4 {
+          display: inline-block;
+          width: 85%;
+          padding-left: 40px;
+          margin: 35px 0 2px 0;
+          font-size: 16px;
+          color: $color-white;
+          font-weight: 400;
+          span {
+            font-weight: 100;
+          }
+        }
+        p:nth-of-type(2) {
+          display: inline-block;
+          width: 85%;
+          margin-top: 0;
+          padding-left: 40px;
+          font-size: 12px;
+          color: $color-white;
+        }
+
+        &::after {
+          content: url("/../../../../../sites/default/files/arrows.png");
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 67%;
+        }
+      }
+    }
+  }
+
+}

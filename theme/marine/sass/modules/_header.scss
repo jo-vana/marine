@@ -1,0 +1,104 @@
+// ========================================
+//
+// @file _header.scss
+// Header element on the page
+//
+// ========================================
+
+#header {
+  // - - Top header - -
+  .top-header {
+    background-color: $top-header;
+
+    .region-top-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      position: relative;
+      float: right;
+
+      #block-phonecontact {
+        display: inline-flex;
+        position: relative;
+        padding-right: 20px;
+        p {
+          display: block;
+          text-transform: uppercase;
+          font-size: 11px;
+          color: $gray;
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 6px;
+            top: 9px;
+            width: 1px;
+            height: 20px;
+            background-color: $gray;
+          }
+        }
+      }
+
+      #block-socialmedialinks {
+        display: inline-flex;
+        ul {
+          margin: 7px 0;
+          li {
+            span {
+              font-size: 20px;
+              &::before {
+                color: $gray;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // - - Header with main menu - -
+  .container-header {
+    display: flex;
+    align-items: center;
+    background-color: $header;
+    min-height: 87px;
+
+    #block-marine-branding {
+      display: inline-flex;
+    }
+    #block-marine-main-menu {
+      display: inline-flex;
+      position: relative;
+      float: right;
+      padding: 25px 0;
+
+      ul.menu {
+        margin: 0 auto;
+        li {
+          display: inline-block;
+          padding-right: 35px;
+          a {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 11px;
+            color: $gray;
+            &::after {
+              content: url("/../../../../../sites/default/files/menu-arrow-n.png");
+              display: inline-block;
+              position: relative;
+              top: 3px;
+              right: -10px;
+            }
+          }
+          &:first-child {
+            a {
+              color: $blue;
+              &::after {
+                content: url("/../../../../../sites/default/files/menu-arrow.png");
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

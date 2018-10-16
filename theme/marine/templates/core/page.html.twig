@@ -1,0 +1,183 @@
+<header id="header" class="header" aria-label="{{ 'Site header'|t }}">
+    <div class="header top-header">
+        <div class="top-header-wrap container">
+            {{ page.top_header }}
+        </div>
+    </div>
+    <div class="container-header menu-desktop clearfix">
+
+        {#<a class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>#}
+        <div class="container">
+            {{ page.header }}
+        </div>
+    </div>
+</header>
+    <section class="hero">
+        <div class="container">
+            {{ page.hero }}
+        </div>
+    </section>
+
+{% if page.featured_left or page.featured_right %}
+    <div class="container clearfix">
+        <div class="featured-content">
+            {% if page.featured_left %}
+                <aside class="featured_left">
+                    <aside class="clearfix">
+                        {{ page.featured_left }}
+                    </aside>
+                </aside>
+            {% endif %}
+            {% if page.featured_right %}
+                <aside class="featured_right">
+                    <aside class="clearfix">
+                        {{ page.featured_right }}
+                    </aside>
+                </aside>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}
+<div class="layout-one-sidebar">
+    <div id="main-wrapper">
+        <div class="container clearfix">
+            {% if page.sidebar_first %}
+                <div id="sidebar-first" class="sidebar">
+                    <aside class="section">
+                        {{ page.sidebar_first }}
+                    </aside>
+                </div>
+            {% endif %}
+            <div id="main" class="clearfix">
+                <main id="content" class="main-content">
+                    <a id="main-content"></a>
+                    {{ page.content }}
+                    {#{{ devel_breakpoint() }}#}
+                </main>
+            </div>
+            {% if page.sidebar_second %}
+                <div id="sidebar-second" class="sidebar">
+                    <aside class="section">
+                        {{ page.sidebar_second }}
+                    </aside>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<section class="button-block-region">
+    <div class="container">
+        {{ page.button_block }}
+    </div>
+</section>
+<section class="calendar-block-region">
+    {{ page.calendar }}
+</section>
+<section class="info-block-region">
+    <div class="container">
+    {{ page.info }}
+    </div>
+</section>
+<section class="gallery-block-region">
+    <div class="container">
+        {{ page.gallery }}
+
+        <div class="gallery">
+            <h2>Project Gallery</h2>
+            <div class="gallery-wrapper">
+                <div class="block">
+                    <div class="top"></div>
+                    <div class="bottom">
+                        <div class="text">
+                            <h3>Project Title</h3>
+                            <p>Graphic design</p>
+                        </div>
+                        <div class="likes">
+                            <p class="current">12</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="top"></div>
+                    <div class="bottom">
+                        <div class="text">
+                            <h3>Project Title</h3>
+                            <p>Graphic design</p>
+                        </div>
+                        <div class="likes">
+                            <p>12</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="top"></div>
+                    <div class="bottom">
+                        <div class="text">
+                            <h3>Project Title</h3>
+                            <p>Graphic design</p>
+                        </div>
+                        <div class="likes">
+                            <p>12</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block last">
+                    <div class="top"></div>
+                    <div class="bottom">
+                        <div class="text">
+                            <h3>Project Title</h3>
+                            <p>Graphic design</p>
+                        </div>
+                        <div class="likes">
+                            <p>12</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="clients-block-region">
+    <div class="container">
+    {{ page.clients }}
+    </div>
+</section>
+<section class="features-block-region">
+    <div class="container">
+    {{ page.features }}
+    </div>
+</section>
+<section class="slider-region">
+    <div class="container">
+    {{ page.slider }}
+    </div>
+</section>
+
+{#{% if page.below_full %}#}
+    {#<section class="container clearfix">#}
+        {#{{ page.below_full }}#}
+    {#</section>#}
+{#{% endif %}#}
+    {#{% if page.call_to_action %}#}
+        {#<div class="container">#}
+            {#{{ page.call_to_action }}#}
+        {#</div>#}
+    {#{% endif %}#}
+<footer class="footer">
+
+    <section class="footer-top container">
+        {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+            {{ page.footer_first }}
+            {{ page.footer_second }}
+            {{ page.footer_third }}
+            {{ page.footer_fourth }}
+        {% endif %}
+    </section>
+
+</footer>
+<section class="footer-bottom">
+    <div class="container">
+    <span>@ {{ now|date('Y') }} MARINE, All Right Reserved.</span>
+    </div>
+</section>
